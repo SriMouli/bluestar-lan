@@ -11,11 +11,21 @@ Blue Star LAN uses your Blue Star account during setup to obtain the paired ACs'
 - Celsius display mode. Home Assistant and the ACs need to be on a network that delivers the ACs' UDP broadcasts on port 44542 to Home Assistant. Check VLAN isolation or guest Wi-Fi settings if a unit stays unavailable.
 - The first version covers the basic climate controls. Fan speed, swing, presets, and usage history require separate model validation.
 
+<!-- ha-marketplace:exclude-start -->
+
 ## Install in Home Assistant
 
-1. Open **Settings → Marketplace → Add from link** and enter `https://github.com/SriMouli/bluestar-lan`. Connect GitHub if Marketplace asks.
-2. Select **Blue Star LAN → Install**, then sign in with the account used in the Blue Star Smart AC app. The integration adds the supported units on that account.
-3. Use **Reconfigure** under **Settings → Devices & services → Blue Star LAN** to refresh LAN keys or add newly paired units. The integration stores unit keys and capabilities in its config entry. It does not retain the account password or cloud session.
+[![Open Blue Star LAN in Home Assistant Marketplace](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=SriMouli&repository=bluestar-lan&category=integration)
+
+Open the badge, add the repository if prompted, and select **Install**. To add it manually, go to **Settings → Marketplace → Add from link** and enter `https://github.com/SriMouli/bluestar-lan`. Connect GitHub if Marketplace asks.
+
+<!-- ha-marketplace:exclude-end -->
+
+## Set up Blue Star LAN
+
+After installing, select **Set up** and sign in with the account used in the Blue Star Smart AC app. The integration adds the supported units on that account.
+
+Use **Reconfigure** under **Settings → Devices & services → Blue Star LAN** to refresh LAN keys or add newly paired units. The integration stores unit keys and capabilities in its config entry. It does not retain the account password or cloud session.
 
 This is a community integration. If you report a problem, include the model, firmware, Home Assistant version and affected function. Leave out account details, LAN keys and configuration storage files.
 
@@ -39,6 +49,10 @@ The client prompts for your Blue Star login. To reuse an existing credentials fi
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The project is distributed under the [MIT license](LICENSE).
+The project code is distributed under the [MIT license](LICENSE).
+
+## Trademark notice
+
+The Blue Star name belongs to Blue Star Limited and identifies the compatible products. Blue Star LAN is an independent community project without affiliation with or endorsement by Blue Star Limited.
 
 Built with Codex. Developed on an Apple Mac mini (M6).
