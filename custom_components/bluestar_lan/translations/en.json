@@ -1,0 +1,31 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect your Blue Star account",
+        "description": "Use the account from the Blue Star Smart AC app. After setup, the integration uses your local network to talk to the ACs.",
+        "data": {"username": "Email or 10-digit phone number", "password": "Password"}
+      },
+      "reconfigure": {
+        "title": "Refresh your Blue Star devices",
+        "description": "Sign in again to add newly paired devices or refresh their LAN keys.",
+        "data": {"username": "Email or 10-digit phone number", "password": "Password"}
+      },
+      "reauth_confirm": {
+        "title": "Reconnect your Blue Star account",
+        "data": {"username": "Email or 10-digit phone number", "password": "Password"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Blue Star rejected the credentials.",
+      "cannot_connect": "Could not read the device inventory from Blue Star.",
+      "no_supported_units": "The account has no units with a supported LAN profile.",
+      "different_account": "This account does not contain any of the previously configured units."
+    },
+    "abort": {
+      "already_configured": "Blue Star LAN is already configured.",
+      "reauth_successful": "Blue Star LAN was reconnected.",
+      "reconfigure_successful": "Blue Star LAN devices were refreshed."
+    }
+  }
+}
